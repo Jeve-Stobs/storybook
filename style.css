@@ -1,15 +1,64 @@
 @import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,700,900,400italic,700italic,900italic|Playfair+Display:400,700,900,400italic,700italic,900italic|Rock+Salt:400);
 
+@font-face {
+  font-family: title1;
+  src: url(3Dumb.ttf);
+}
+@font-face {
+  font-family: page1;
+  src: url(sans.ttf);
+}
+.hide {
+  display: none;
+}
+
+.hider:hover + .hide {
+  display: block;
+  color: red;
+  font: 1.5em 'title1', sans-serif;
+}
+
+a.button1{
+ display:inline-block;
+ padding:0.35em 1.2em;
+ border:0.1em solid #FFFFFF;
+ margin:0 0.3em 0.3em 0;
+ border-radius:0.12em;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-family:'Roboto',sans-serif;
+ font-weight:300;
+ color:#FFFFFF;
+ text-align:center;
+ transition: all 0.2s;
+}
+a.button1:hover{
+ color:#000000;
+ background-color:#FFFFFF;
+}
+@media all and (max-width:30em){
+ a.button1{
+  display:block;
+  margin:0.4em auto;
+ }
+}
+
 *,
 :before,
 :after {
     box-sizing: border-box;
 }
 
+.zoom
+{
+    zoom: 67%;
+}
+html{
+}
 body {
-    background-color: #1d1f20;
+    background-color: olivedrab;
     color: #e5e5e5;
-    font: 16px/1.25 'Crimson Text', sans-serif;
+    font: 20px/1.25 '3Dumb', sans-serif;
     margin: 0;
 }
 
@@ -55,7 +104,7 @@ body {
 
 .open-book header *,
 .open-book footer * {
-    font: 700 1em/1.25 'Playfair Display', sans-serif;
+    font: 700 1em/1.25 'title1', sans-serif;
     letter-spacing: 0.125em;
     margin: 0;
 }
@@ -84,7 +133,7 @@ body {
 .open-book .chapter-title {
     background: url(images/title.svg) bottom center no-repeat;
     background-size: 0.5em 0.5em;
-    font: 700 7vw/1.25 'Playfair Display', sans-serif;
+    font: 700 7vw/1.25 'title1', sans-serif;
     letter-spacing: 0.125em;
     margin: 0 0 1em 0;
     padding: 1em 0;
