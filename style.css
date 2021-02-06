@@ -6,8 +6,50 @@
 }
 @font-face {
   font-family: page1;
-  src: url(sans.ttf);
+  src: url(Adventuring.ttf);
 }
+.rainbow-text {
+  background-image: linear-gradient(to left, violet, indigo, blue, green, purple, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.box {
+  position: relative;
+  display: inline-block;
+  width: 500px;
+  height: 250px;
+  background-color: #fff;
+  border-color: black;
+  box-shadow: 12px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.box::after {
+  content: "";
+  border-radius: 15px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.box:hover {
+  -webkit-transform: scale(1.25, 1.25);
+  transform: scale(1.25, 1.25);
+}
+
+.box:hover::after {
+    opacity: 1;
+}
+
 .hide {
   display: none;
 }
@@ -26,7 +68,7 @@ a.button1{
  border-radius:0.12em;
  box-sizing: border-box;
  text-decoration:none;
- font-family:'Roboto',sans-serif;
+ font-family:'page1',sans-serif;
  font-weight:300;
  color:#FFFFFF;
  text-align:center;
@@ -56,9 +98,10 @@ a.button1:hover{
 html{
 }
 body {
-    background-color: olivedrab;
-    color: #e5e5e5;
-    font: 20px/1.25 '3Dumb', sans-serif;
+background-color: black;
+background: url(https://raw.githubusercontent.com/Jeve-Stobs/potential-octo-telegram/main/Stars.svg); 
+   color: #e5e5e5;
+    font: 20px/1.25 'page1', sans-serif;
     margin: 0;
 }
 
@@ -181,7 +224,7 @@ body {
 
 .open-book .chapter-title + p:first-of-type:first-letter {
     float: left;
-    font: 700 3em/0.65 'Playfair Display', sans-serif;
+    font: 700 3em/0.65 'page1', sans-serif;
     padding: 0.15em 0.05em 0 0;
     text-transform: uppercase;
 }
