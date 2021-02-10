@@ -61,8 +61,14 @@ a.button1:hover{
 html{
 }
 body {
-background-color: black;
-background: url(https://raw.githubusercontent.com/Jeve-Stobs/potential-octo-telegram/main/Stars.svg); 
+background: #202736;
+  background: linear-gradient(to bottom, #181d23 0%, #202736 80%);
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  margin: 0 auto;
+  z-index: 1;background: url(https://raw.githubusercontent.com/Jeve-Stobs/potential-octo-telegram/main/Stars.svg); 
    color: #e5e5e5;
     font: 20px/1.25 'page1', sans-serif;
     margin: 0;
